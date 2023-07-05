@@ -39,7 +39,7 @@ router.get("/movies",(req,res)=>{
         }
         //! a remplacer par un map §§§
         
-        res.json(lastReleases);
+        res.json({movies : lastReleases});
 
     })
     
