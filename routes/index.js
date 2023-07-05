@@ -31,9 +31,9 @@ router.get("/movies",(req,res)=>{
         for(let i =0; i<data.results.length;i++){
             let obj ={};
             obj.title= data.results[i].title;
-            obj.poster= `${path}${data.results[i].poster_path}`;
-            obj.voteAverage= data.results[i].vote_average;
-            obj.voteCount= data.results[i].vote_count;
+            obj.poster_path= `${path}${data.results[i].poster_path}`;
+            obj.vote_average= data.results[i].vote_average;
+            obj.vote_count= data.results[i].vote_count;
             obj.overview= reduireTexte(data.results[i].overview,100)
             lastReleases.push(obj)
         }
